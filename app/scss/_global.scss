@@ -1,0 +1,20 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    word-break: break-word;
+    color: $text;
+}
+
+a {
+    color: $text;
+    &:hover {
+        color: $color_main_2;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

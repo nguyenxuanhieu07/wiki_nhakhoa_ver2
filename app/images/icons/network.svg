@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31.64" height="31.204" viewBox="0 0 31.64 31.204">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff898b" stop-opacity="0.251"/>
+      <stop offset="1" stop-color="#ff898b"/>
+    </linearGradient>
+  </defs>
+  <g id="network" transform="translate(2.988 0.085)">
+    <g id="Group_4447" data-name="Group 4447" transform="translate(-2.678 0.104)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="15.5" cy="15.5" r="15.5" transform="translate(-0.309 0.002)" fill="none"/>
+    </g>
+    <g id="phone-call_4_" data-name="phone-call (4)" transform="translate(-2.551 -0.085)">
+      <g id="Group_4443" data-name="Group 4443" transform="translate(0 0)">
+        <g id="Group_4442" data-name="Group 4442">
+          <path id="Path_3213" data-name="Path 3213" d="M129.948,128.666l-4.673-3.116a2.762,2.762,0,0,0-3.475.344l-1.23,1.229a8.5,8.5,0,0,1-6.491-6.492l1.228-1.229a2.762,2.762,0,0,0,.344-3.476l-3.117-4.674a2.754,2.754,0,0,0-4.239-.42l-1.947,1.948a4.545,4.545,0,0,0-1.341,3.478c.147,2.5,1.227,7.522,6.821,13.115s10.616,6.674,13.114,6.821a4.552,4.552,0,0,0,3.479-1.342l1.949-1.948a2.754,2.754,0,0,0-.421-4.239ZM127.938,105a8.26,8.26,0,0,0-7.209,12.3l-1.008,3.019a.918.918,0,0,0,1.162,1.161l3.02-1.006A8.263,8.263,0,1,0,127.938,105Zm-3.673,9.181a.918.918,0,1,1,.918-.918A.918.918,0,0,1,124.265,114.181Zm3.673,0a.918.918,0,1,1,.918-.918A.918.918,0,0,1,127.938,114.181Zm3.672,0a.918.918,0,1,1,.918-.918A.918.918,0,0,1,131.61,114.181Z" transform="translate(-104.998 -105)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

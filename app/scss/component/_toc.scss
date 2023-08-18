@@ -1,0 +1,28 @@
+.toc-top{
+    box-shadow: 0 6px 6px -6px rgba($color: #000000, $alpha: 0.16);
+    margin-bottom: 55px;
+    .list-toc{
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        margin: 0;
+        .item{
+            padding: 20px 15px 20px 0px;
+            font-size: 16px;
+            font-weight: 700;
+            border: 3px solid transparent;
+            &:hover{
+                border-bottom: 3px solid $color_main_2;
+                border-top-left-radius:8px;
+                border-top-right-radius: 8px;
+            }
+        }
+        @media (max-width:575px) {
+            overflow-x: auto;
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.cta-action {
+	position: fixed;
+	top: 70%;
+	left: 30px;
+	display: flex;
+	flex-direction: column;
+	z-index: 5;
+
+	.cta-link {
+		margin-bottom: 10px;
+	}
+}
+
+.animation {
+	position: relative;
+
+	.phone {
+		display: block;
+		animation: coccoc-alo-circle-img-anim 1s infinite ease-in-out;
+	}
+
+	.coccoc-alo-ph-circle-fill {
+		width: 70px;
+		height: 70px;
+		top: -10px;
+		left: -10px;
+		border-radius: 50%;
+		background-color: rgba(255, 137, 139, 0.5);
+		opacity: .75 !important;
+		position: absolute;
+		// transform: translate3d(-14%, -15%, 0);
+		animation: coccoc-alo-circle-fill-anim 2.3s infinite ease-in-out;
+	}
+	.coccoc-alo-ph-circle{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		background-color: transparent;
+		top: -25px;
+		left: -25px;
+		border-radius: 50%;
+		border: 2px solid rgba(255, 137, 139, 0.5);
+		animation: coccoc-alo-circle-anim 2.2s infinite ease-in-out;
+	}
+}

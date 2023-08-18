@@ -1,0 +1,18 @@
+.search-form-nothing {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+
+    .search-submit-nothing {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: calc(1.5em + .75rem + 4px);
+        border: none;
+        border-radius: 0.25rem;
+        background: $second_color;
+        color: $light;
+        width: 60px;
+    }
+}

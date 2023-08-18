@@ -1,0 +1,10 @@
+.breadcrumb {
+  background: #f6eeff;
+  font-size: 14px;
+  padding: 14px 0;
+  font-weight: 500;
+  margin-bottom: 0;
+  &-link {
+    color: $color_main_2;
+  }
+}

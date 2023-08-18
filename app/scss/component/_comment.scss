@@ -1,0 +1,125 @@
+.comment-form{
+    border: 1px solid #CECECE;
+    border-radius: 10px;
+    padding: 12px 13px;
+    margin-bottom: 56px;
+    .comment-title{
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .comment-criteria{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .rate{
+        margin-bottom: 30px;
+    }
+    .ratting-star{
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        flex-direction: row-reverse;
+        margin-bottom: 0;
+        .star{
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .fa{
+            color: #BBBBBB;
+        }
+        &:not(.active) > .star:hover .fa,
+        &:not(.active) > .star:hover  ~ .star .fa{
+            color: #FFBD06;
+        }
+        .active{
+            .fa{
+                color: #FFBD06;
+            }
+        }
+        > .star.active ~ .star .fa{
+            color: #FFBD06;
+        }
+    }
+    #comment{
+        background: #F5F5F5;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .ip-custom{
+        background: #F5F5F5;
+        margin-bottom: 10px;
+    }
+    .comment-agree{
+        margin-bottom: 20px;
+        .link{
+            color: #008ECE;
+        }
+    }
+    .form-submit{
+        margin-bottom: 0;
+        .submit{
+            background: $color_main_2;
+            color: $light;
+            font-weight: 700;
+            padding: 8px 24px;
+            border-radius: 25px;
+            border: none;
+            &:hover{
+                background: $color_main;
+            }
+        }
+    }
+    @media (max-width:575px) {
+        .comment-criteria{
+            width: 100%;
+        }
+    }
+}
+.comment-list{
+    list-style: none;
+    padding-left: 0;
+    .comment{
+        border-bottom: 1px solid #CECECE;
+        padding-top: 24px;
+    }
+    .cm-border{
+        border-bottom:none;
+    }
+    .comment-body{
+        position: relative;
+        padding-left: 100px;
+        padding-bottom: 16px;
+        .comment-author{
+            margin-bottom: 10px;
+        }
+        .avatar{
+            position: absolute;
+            left: 0;
+            height: 80px;
+            width: 80px;
+        }
+        .fa-star{
+            font-size: 14px;
+        }
+        .active{
+            color: #FFBD06;
+        }
+        .fn{
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .info-item{
+            font-size: 12px;
+            margin-right: 5px;
+            color: #999999;
+        }
+        .accuracy{
+            color: #4CAF50;
+        }
+        .comment-content{
+            font-size: 14px;
+        }
+    }
+}

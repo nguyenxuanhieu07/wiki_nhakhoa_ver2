@@ -1,0 +1,131 @@
+.search-brands{
+    padding: 27px 0;
+    background: $color_main_2;
+}
+.form-search-brands{
+    display: flex;
+    justify-content: center;
+    .form-search-item{
+        margin-bottom: 0;
+        margin-right: 12px;
+        .select{
+            border-radius: 8px;
+        }
+    }
+    @media (max-width:575px) {
+        .form-search-item{
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .m-last-child{
+            margin-bottom: 18px;
+        }
+    }
+    .btn-search{
+        color: $light;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 5px 20px;
+        border-radius: 8px;
+        background: $color_main;
+    }
+}
+.brands-content{
+    padding: 50px 0;
+    .page-title{
+        font-size: 32px;
+        color: $color_main;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+    }
+    .page-desc{
+        margin-bottom: 32px;
+    }
+    .brands-title{
+        font-size: 22px;
+        color: $color_main_2;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::before{
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: #D4D4D4;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+        }
+        &::after{
+            content: '';
+            width: 9%;
+            height: 2px;
+            background: $color_main;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            transform: translateY(25%);
+            @media (max-width:575px) {
+                width: 25%;
+            }
+        }
+        .title{
+            font-size: 22px;
+            font-weight: 700;
+        }
+        .select{
+            width: 30%;
+            border-radius: 14px;
+            font-size: 14px;
+        }
+    }
+    .list-criteria{
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 32px;
+        .item{
+            margin-bottom: 5px;
+            position: relative;
+            padding-left: 25px;
+            &::before{
+                content: '\f058';
+                font-family: 'FontAwesome';
+                position: absolute;
+                left: 0;
+                color: $color_main_2;
+            }
+        }
+    }
+    .list-brands{
+        .post{
+            padding: 16px;
+            box-shadow: 0 0 6px rgba($color:  #D6B2FF, $alpha: 0.5);
+            border-radius: 25px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 16px;
+        }
+        .post-name{
+            margin-bottom: 10px;
+        }
+        .post-thumbnail{
+            border-radius: 25px;
+            width: 164px;
+            height: 164px;
+            display: inline-block;
+            flex-shrink: 0;
+            position: relative;
+        }
+        .post-content{
+            padding-left: 16px;
+            font-size: 14px;
+        }
+        .post-item{
+            margin-bottom: 5px;
+        }
+    }
+}

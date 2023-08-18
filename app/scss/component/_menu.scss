@@ -1,0 +1,86 @@
+.primary-nav {
+    background: $color_bg;
+    box-shadow: 0 6px 10px rgba($color: #E54807, $alpha: 0.1);
+
+    .nav-link {
+        color: $text;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .menu-item.icon-homes {
+        font-size: 0;
+        padding: 0.5rem 5px;
+        text-indent: -9999px;
+
+        a {
+            display: block;
+            width: 20px;
+            height: 20px;
+
+            background: url(../images/icons/home.svg) no-repeat;
+            background-position: 50%;
+        }
+    }
+
+    .nav-item {
+        .nav-link {
+            padding-right: 15px;
+            padding-left: 15px;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 0;
+                height: 2px;
+                background: $second_color;
+                position: absolute;
+                top: 90%;
+                left: 0;
+                transition: all .3s;
+            }
+
+            &:hover {
+                &::before {
+                    left: 15px;
+                    width: calc(100% - 30px);
+                }
+            }
+        }
+    }
+
+    .main-menu {
+        .dropdown-menu {
+            border: none;
+            box-shadow: 1px 1px 4px rgba($color: $text, $alpha: 0.3);
+            border-radius: 0;
+            left: -10px;
+            top: calc(100% + 5px);
+
+            a {
+                font-weight: 500;
+                color: $text;
+                position: relative;
+                padding: 10px 1.5rem 10px 40px;
+
+                &::before {
+                    content: "";
+                    background: url(../images/icons/lotus.svg) no-repeat;
+                    background-size: 100% auto;
+                    width: 15px;
+                    height: 13px;
+                    position: absolute;
+                    left: 16px;
+                    top: 16px;
+                }
+            }
+        }
+    }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: $second_color;
+    color: $light !important;
+}

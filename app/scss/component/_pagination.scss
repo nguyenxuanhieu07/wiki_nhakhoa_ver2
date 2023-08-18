@@ -1,0 +1,25 @@
+.pagination-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination {
+    justify-content: center;
+    .page-numbers {
+        padding: 4px 11px;
+        margin: 5px;
+        border-radius: 5px;
+        background: #E8E8E8;
+
+        &.current {
+            background: $color_main_2;
+            color: $light;
+            font-weight: 700;
+        }
+
+        &:hover {
+            background: $color_main_2;
+            color: $light;
+        }
+    }
+}

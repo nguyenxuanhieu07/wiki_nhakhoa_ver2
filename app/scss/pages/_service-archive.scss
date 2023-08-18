@@ -1,0 +1,97 @@
+.archive-banner {
+	background: url('../images/banner/Banner-chi-tieets.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+
+	.col-text {
+		display: flex;
+		height: 250px;
+		align-items: center;
+	}
+
+	.archive-title {
+		font-size: 32px;
+		color: $light;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-bottom: 0;
+
+		.title-child {
+			font-size: 45px;
+			color: $color_main;
+			display: block;
+		}
+	}
+}
+
+.archive-content {
+	padding-top: 50px;
+	padding-bottom: 40px;
+
+	.archive-desc {
+		margin-bottom: 50px;
+	}
+}
+
+.archive-item {
+	margin-bottom: 16px;
+
+	.arichive-inner {
+		border: 1px solid #ECECEC;
+		border-radius: 12px;
+		padding: 12px;
+		
+		.title-number {
+			font-size: 40px;
+			font-weight: 700;
+			color: #BBBBBB;
+			margin-bottom: 12px;
+		}
+
+		.title-text {
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
+			position: relative;
+			padding-bottom: 8px;
+			margin-bottom: 24px;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 35%;
+				border-bottom: 1px solid $color_main_2;
+			}
+		}
+
+		.list-child {
+			padding-left: 18px;
+			margin-bottom: 14px;
+
+			.item {
+				font-weight: 500;
+
+				&:not(:last-child) {
+					margin-bottom: 14px;
+				}
+			}
+		}
+
+		.link-btn {
+			padding: 8px 24px;
+			background: $color_main_2;
+			color: $light;
+			font-weight: 700;
+			border-radius: 25px;
+			display: inline-block;
+
+			&:hover {
+				background: $color_main;
+				opacity: 0.8;
+			}
+		}
+	}
+}

@@ -1,0 +1,228 @@
+.header-content {
+    padding: 31px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    .logo {
+        img {
+            width: 175px;
+            aspect-ratio: 175/28;
+        }
+    }
+
+    .action-header {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-form-desk {
+        position: relative;
+        width: 45%;
+
+        .search-header {
+            border-radius: 20px;
+            border: 1px solid rgba($color: $color_main, $alpha: 0.12);
+            box-shadow: 0 0 6px rgba($color: $color_boxshadown, $alpha: 0.3);
+            width: 100%;
+            padding-left: 50px;
+            height: 40px;
+        }
+
+        .btn-search {
+            position: absolute;
+            left: 0;
+            padding-left: 16px;
+        }
+
+        img {
+            width: 23px;
+            height: 23px;
+        }
+    }
+
+    .number-phone,
+    .connect {
+        .link {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img {
+            margin-right: 8px;
+            width: 31px;
+            height: 31px;
+        }
+
+        .item {
+            display: block;
+
+            &:first-child {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .connect {
+        margin: 0;
+    }
+
+    @media (max-width:991px) and (min-width : 768px) {
+
+        .number-phone,
+        .connect {
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width:575px) {
+        padding: 29px 0;
+        box-shadow: 0 0 6px rgba($color: #D6B2FF, $alpha: 0.5);
+
+        .action-header {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .number-phone,
+        .connect {
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba($color: #E8ADC6, $alpha: 0.25);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .img {
+                width: 23px;
+                height: 22px;
+                margin: 0;
+            }
+        }
+
+        .search-form-desk {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+.page-header {
+    border-bottom: 1px solid rgba($color: #FF898B, $alpha: .12);
+    .primary-nav {
+        padding-left: 0;
+        padding-top: 15px;
+        padding-bottom: 0;
+
+        .search-form-desk {
+            position: relative;
+            margin-bottom: 18px;
+
+            .search-header {
+                border-radius: 20px;
+                border: 1px solid rgba($color: $color_main, $alpha: 0.12);
+                box-shadow: 0 0 6px rgba($color: $color_boxshadown, $alpha: 0.3);
+                width: 100%;
+                padding-left: 45px;
+                height: 40px;
+            }
+
+            .btn-search {
+                position: absolute;
+                left: 0;
+                padding-left: 16px;
+            }
+        }
+    }
+
+    @media (max-width:575px) {
+        position: sticky;
+        top: 0;
+        background: $light;
+        z-index: 5;
+
+        .primary-nav {
+            padding: 0;
+
+            .nav-item {
+                border-bottom: 1px solid #E8E8E8;
+
+                &:last-child {
+                    border: none;
+                }
+            }
+
+            .active {
+                display: block !important;
+                padding-top: 19px;
+            }
+        }
+    }
+}
+
+.main-menu {
+    width: 100%;
+    justify-content: space-between;
+
+    .nav-item {
+        &:first-child {
+            .nav-link {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .nav-link {
+        color: $color_main_2;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        &:hover {
+            color: $color_main;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                width: 100%;
+                height: 2px;
+                background-color: $color_main_2;
+                animation: underline .5s linear;
+            }
+        }
+    }
+
+    @media (max-width:991px) and (min-width : 768px) {
+        .nav-link {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width:575px) {
+        .nav-item {
+            .dropdown-toggle {
+                &::after {
+                    content: '\f107';
+                    font-family: 'FontAwesome';
+                    border: none;
+                    position: absolute;
+                    right: 0;
+                    color: $color_main;
+                }
+            }
+        }
+
+        .nav-link {
+            padding: 11px 0;
+        }
+    }
+}
