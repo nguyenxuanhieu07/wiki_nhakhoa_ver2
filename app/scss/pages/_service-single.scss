@@ -135,113 +135,91 @@
 			margin-bottom: 0;
 		}
 	}
-}
 
-table {
-	border-radius: 12px;
-	overflow: hidden;
+	.toplist-faq {
+		background: $light;
+		padding: 0;
+		margin-bottom: 50px;
 
-	tr {
-		&:first-child {
-			background: $color_main_2;
-			color: $light;
-			text-align: center;
-
-			th {
-				padding: 13px 0;
-			}
-		}
-
-		&:not(:first-child) {
-			&:nth-child(odd) {
-				background-color: #F6EEFF;
-			}
-
-			&:nth-child(even) {
-				background-color: #FAFAFB;
-			}
-		}
-
-		th,
-		td {
-			&:not(:last-child) {
-				border-right: 2px solid $light;
-			}
-		}
-	}
-}
-
-.compare-table {
-	margin-bottom: 50px;
-
-	tr {
-
-		&:nth-child(2) {
-			td {
-				strong {
-					color: $color_main;
-				}
-			}
-		}
-
-		&:not(:nth-child(2)) {
-			td {
-				padding: 50px 18px;
-			}
+		.item-faq {
+			width: 100%;
 		}
 	}
 
-	td {
-		font-weight: 500;
+	.comment-form {
+		width: 70%;
+		margin: 0 auto 50px auto;
+		background: #F6EEFF;
+		border-radius: 10px;
+		border: none;
+		padding: 16px;
 
-		&:first-child {
-			white-space: nowrap;
-			font-weight: 700;
-			padding: 13px 18px;
+		#comment,
+		.ip-custom {
+			background: $light;
 		}
 
-		&:not(:first-child) {
+		.rate {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.comment-criteria {
+			border: 1px solid $color_main_2;
+			border-radius: 10px;
+			align-items: center;
+			margin-bottom: 0;
+			justify-content: flex-start;
 			font-size: 14px;
-			text-align: center;
+			width: auto;
+			padding: 10px 12px;
+
+			.text {
+				margin-right: 12px;
+				font-weight: 500;
+			}
+		}
+
+		.level-pain {
+			position: relative;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			width: 20%;
+			height: auto;
+
+			&::after {
+				content: '\f0dd';
+				font-family: 'FontAwesome';
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				font-size: 30px;
+				transform: translateY(-30%);
+			}
 		}
 	}
-}
 
-.price-table {
-	margin-bottom: 50px;
-
-	table {
-		margin: 0 auto 33px;
-		width: 55%;
-		text-align: center;
-
-		th {
-			padding: 14px 0;
-		}
-
-		td {
-			padding: 14px 0;
-			font-weight: 500;
-		}
-	}
-
-	.table-desc {
-		margin-bottom: 26px;
-	}
-
-	.table-link {
-		margin-bottom: 0;
-
-		.link {
-			color: #2196F3;
-			text-decoration: underline;
-		}
+	.comment-title {
+		margin-bottom: 24px;
+		font-size: 18px;
+		text-transform: uppercase;
 	}
 }
 
 .top-experts,
 .top-brands {
 	margin-bottom: 50px;
+
+	.inner {
+		box-shadow: 0 0 10px rgba($color: #D6B2FF, $alpha: 0.3);
+		border-radius: 25px;
+		padding: 16px;
+	}
+
+	.point-rank {
+		width: 100%;
+	}
+
 	.slick-track {
 		padding: 5px 0;
 	}
@@ -258,6 +236,7 @@ table {
 		top: 100px;
 		background-color: rgba($color: #3A3A3A, $alpha: .25);
 		border-radius: 50%;
+
 		&::before {
 			content: '\f104';
 			font-family: 'FontAwesome';
@@ -271,11 +250,31 @@ table {
 		top: 100px;
 		background-color: rgba($color: #3A3A3A, $alpha: .25);
 		border-radius: 50%;
+
 		&::before {
 			content: '\f105';
 			font-family: 'FontAwesome';
 			color: $light;
 			font-size: 20px;
 		}
+	}
+
+	.post-name {
+		img {
+			display: inline;
+		}
+	}
+}
+
+.top-brands {
+	margin-bottom: 24px;
+}
+
+.content-bottom {
+	margin-bottom: 50px;
+
+	p {
+		font-weight: 700;
+		margin-bottom: 0;
 	}
 }

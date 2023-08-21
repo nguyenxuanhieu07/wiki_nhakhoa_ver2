@@ -228,10 +228,6 @@
 }
 
 .post-ranks {
-    padding: 16px;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba($color: #D6B2FF, $alpha: 0.3);
-
     .post-thumbnail {
         position: relative;
         width: 164px;
@@ -319,64 +315,65 @@
             margin-right: 10px;
         }
     }
+}
 
-    .point-rank {
-        border: 1px solid #F8F1FF;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        overflow: hidden;
+.point-rank {
+    border: 1px solid #F8F1FF;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+}
+
+.point-total {
+    margin-bottom: 0;
+    font-weight: 700;
+    background: #F6EEFF;
+    color: $color_main_2;
+    padding: 11px 0;
+}
+
+.list-status {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+
+    .item {
+        font-size: 13px;
+        padding: 6px;
+        margin-bottom: 6px;
+        border-radius: 20px;
+        font-weight: 500;
+        display: inline-block;
+        margin-right: 12px;
     }
 
-    .point-total {
-        margin-bottom: 0;
-        font-weight: 700;
-        background: #F6EEFF;
-        color: $color_main_2;
-        padding: 11px 0;
+    .fa {
+        margin-right: 7px;
     }
 
-    .list-status {
-        list-style: none;
-        margin-bottom: 0;
-        padding: 15px;
-        display: flex;
-        justify-content: center;
-        .item {
-            font-size: 13px;
-            padding: 6px;
-            margin-bottom: 6px;
-            border-radius: 20px;
-            font-weight: 500;
-            display: inline-block;
-            margin-right: 12px;
-        }
+    .good {
+        background: #E5FAF2;
 
         .fa {
-            margin-right: 7px;
+            color: #36CC7B;
         }
+    }
 
-        .good {
-            background: #E5FAF2;
+    .rather {
+        background: #FFF6ED;
 
-            .fa {
-                color: #36CC7B;
-            }
+        .fa {
+            color: #FBA34A;
         }
+    }
 
-        .rather {
-            background: #FFF6ED;
+    .bad {
+        background: #FEEEED;
 
-            .fa {
-                color: #FBA34A;
-            }
-        }
-
-        .bad {
-            background: #FEEEED;
-
-            .fa {
-                color: #F95D59;
-            }
+        .fa {
+            color: #F95D59;
         }
     }
 }

@@ -1,0 +1,43 @@
+.table-price-single{
+	.page-title{
+		margin-bottom: 24px;
+	}
+	.price-table{
+		table{
+			width: 85%;
+		}
+	} 
+	.inner{
+		padding: 12px;
+		background: #FAFAFB;
+		border-radius: 12px;
+		margin-bottom: 24px;
+		&-number{
+			font-size: 43px;
+			color: #BBBBBB;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		&-text{
+			font-weight: 700;
+			padding-bottom: 8px;
+			position: relative;
+			margin-bottom: 16px;
+			font-size: 16px;
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 40%;
+				border-bottom: 1px solid $color_main_2;
+			}
+		}
+		&-desc{
+			-webkit-line-clamp: 6;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			display: -webkit-box;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+.status-archive {
+	.single-title {
+		&::after {
+			width: 10%;
+		}
+	}
+
+	.archive-item {
+		margin-bottom: 24px;
+	}
+}

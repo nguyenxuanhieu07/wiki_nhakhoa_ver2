@@ -3,6 +3,7 @@
 // Element
 @import "element/animation";
 @import "element/button";
+@import "element/table";
 // Component
 @import "component/post";
 @import "component/breadcrumb";
@@ -11,6 +12,7 @@
 @import "component/comment";
 @import "component/form-sidebar";
 @import "component/cta";
+@import "component/faq";
 // Layout
 @import "layouts/header";
 @import "layouts/footer";
@@ -29,3 +31,7 @@
 // các page giai đoạn 2
 @import "pages/service-archive";
 @import "pages/service-single";
+@import "pages/status-archive";
+@import "pages/status-single";
+@import "pages/tableprice-archive";
+@import "pages/tableprice-single";
