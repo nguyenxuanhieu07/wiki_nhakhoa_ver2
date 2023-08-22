@@ -1,0 +1,111 @@
+.sidebar {
+	.form-register-sidebar {
+		background: #F6EEFF;
+		border: 1px solid #707070;
+		border-radius: 10px;
+		border-bottom: 5px solid $color_main_2;
+		margin-bottom: 24px;
+
+		.form-title {
+			font-size: 22px;
+			color: $color_main_2;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		.title-item {
+			color: $color_main;
+			text-transform: none;
+		}
+	}
+
+	.form-row-custom {
+		padding: 21px;
+	}
+
+	.form-group-custom {
+		margin-bottom: 10px;
+	}
+
+	.form-control-custom {
+		border-radius: 10px;
+	}
+
+	.btn-register-sibar {
+		color: $color_main;
+		background: $color_main_2;
+		font-weight: 700;
+		font-size: 14px;
+		padding: 9px 0;
+		border-radius: 18px;
+		width: 100%;
+
+		&:hover {
+			background-color: $color_main;
+			color: $light;
+		}
+	}
+
+	.m-20 {
+		margin-bottom: 20px;
+	}
+
+	.inner-sibar-brand {
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
+
+		.sibar-brand-content {
+			position: absolute;
+			padding: 12px 0;
+			z-index: 3;
+			background: $color_main_2;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.sibar-brand-title {
+			font-size: 18px;
+			color: $color_main;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+		}
+
+		.sibar-brand-desc {
+			font-size: 14px;
+			color: $light;
+			font-weight: 500;
+			text-align: center;
+			margin: 0 auto;
+			padding-bottom: 10px;
+			width: 65%;
+
+		}
+
+		.btn-register-brand {
+			background: $color_main;
+			color: $light;
+			border-radius: 25px;
+			font-size: 14px;
+			font-weight: 700;
+			padding: 8px 10px;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	@media (max-width:575px) {
+		.inner-sibar-brand {
+			margin-bottom: 50px;
+		}
+
+		.img-sidebar {
+			width: 100%;
+		}
+	}
+}

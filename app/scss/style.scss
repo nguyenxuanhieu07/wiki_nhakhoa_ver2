@@ -10,12 +10,14 @@
 @import "component/pagination";
 @import "component/toc";
 @import "component/comment";
-@import "component/form-sidebar";
 @import "component/cta";
 @import "component/faq";
+@import "component/post-author-top";
+@import "component/post-author-bottom";
 // Layout
 @import "layouts/header";
 @import "layouts/footer";
+@import "layouts/sidebar";
 // Pages
 @import "pages/homepage";
 @import "pages/specialist";
@@ -35,3 +37,4 @@
 @import "pages/status-single";
 @import "pages/tableprice-archive";
 @import "pages/tableprice-single";
+@import "pages/blog";

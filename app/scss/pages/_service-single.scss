@@ -4,6 +4,9 @@
 	color: #FF898B;
 	text-transform: uppercase;
 	margin-bottom: 16px;
+	@media (max-width: 575px) {
+		font-size: 26px;
+	}
 }
 
 .single-title {

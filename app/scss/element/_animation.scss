@@ -1,6 +1,11 @@
 @keyframes underline {
-    0% { width: 0; }
-    100% { width: 100%; }
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 @keyframes coccoc-alo-circle-anim {
@@ -8,10 +13,12 @@
         transform: rotate(0) scale(.5) skew(1deg);
         opacity: .1
     }
+
     30% {
         transform: rotate(0) scale(.7) skew(1deg);
         opacity: .5
     }
+
     100% {
         transform: rotate(0) scale(1) skew(1deg);
         opacity: .1
@@ -23,10 +30,12 @@
         transform: rotate(0) scale(.7) skew(1deg);
         opacity: .2
     }
+
     50% {
         transform: rotate(0) scale(1) skew(1deg);
         opacity: .2
     }
+
     100% {
         transform: rotate(0) scale(.7) skew(1deg);
         opacity: .2
@@ -37,22 +46,50 @@
     0% {
         transform: rotate(0) scale(1) skew(1deg)
     }
+
     10% {
         transform: rotate(-25deg) scale(1) skew(1deg)
     }
+
     20% {
         transform: rotate(25deg) scale(1) skew(1deg)
     }
+
     30% {
         transform: rotate(-25deg) scale(1) skew(1deg)
     }
+
     40% {
         transform: rotate(25deg) scale(1) skew(1deg)
     }
+
     50% {
         transform: rotate(0) scale(1) skew(1deg)
     }
+
     100% {
         transform: rotate(0) scale(1) skew(1deg)
+    }
+}
+
+@keyframes bounce-1 {
+    50% {
+        transform: translateY(-90px);
+        scale: 0.3;
+    }
+}
+
+@keyframes bounce-2 {
+    50% {
+        transform: translateY(-90px);
+        scale: 0.3;
+    }
+}
+
+
+@keyframes bounce-3 {
+    50% {
+        transform: translateY(-90px);
+        scale: 0.3;
     }
 }

@@ -27,6 +27,8 @@ var slider={
     slider.service_list_experts();
     slider.service_list_brands();
     slider.service_list_suggest();
+    slider.list_blogs_related();
+    slider.list_affecting()
   },
   service_top: function() {
     var list_slide=$(".service-top .list-service");
@@ -355,18 +357,64 @@ var slider={
         speed: 1000,
         autoplaySpeed: 3000,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         responsive: [
           {
             breakpoint: 575,
             settings: {
               slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: false,
+              centerMode: false,
+              arrows: true,
+            },
+          },
+        ],
+      });
+    }
+  },
+  list_blogs_related: function() {
+    var list_slide=$(".comments-area .list-blogs-related");
+    var number_slide=$(".comments-area .list-blogs-related .related-item").length;
+    if(list_slide.length>0&&number_slide>2) {
+      list_slide.slick({
+        dots: false,
+        arrow: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [
+          {
+            breakpoint: 575,
+            settings: {
+              slidesToShow: 1,
               slidesToScroll: 1,
               infinite: true,
-              dots: true,
+              dots: false,
               centerMode: false,
-              arrows: false,
+              arrows: true,
             },
+          },
+        ],
+      });
+    }
+  },
+  list_affecting: function() {
+    var list_slide=$(".list-affecting");
+    var number_slide=$(".list-affecting .affecting-item").length;
+    if(list_slide.length>0&&number_slide > 1) {
+      list_slide.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        mobileFirst: true,
+        arrows: false,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 575,
+            settings: "unslick",
           },
         ],
       });

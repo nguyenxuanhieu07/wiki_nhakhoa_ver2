@@ -99,3 +99,16 @@ table {
 		}
 	}
 }
+@media (max-width:575px) {
+	.price-table{
+		overflow: scroll;
+		margin-bottom: 15px;
+		table{
+			white-space: nowrap;
+			th,
+			td{
+				padding: 14px 16px;
+			}
+		}
+	}
+}
