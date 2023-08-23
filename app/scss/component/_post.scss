@@ -126,108 +126,10 @@
     }
 }
 
-.post-rank {
-    padding: 12px;
-    box-shadow: 0 0 6px rgba($color: #D6B2FF, $alpha: 0.5);
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 26px;
-    background: $light;
-
-    .post-thumbnail {
-        position: relative;
-        width: 164px;
-        height: 164px;
-        flex-shrink: 0;
-
-        img {
-            border-radius: 25px;
-            background-color: #F8F8F8;
-            -o-object-fit: cover;
-            object-fit: cover;
-            object-position: 50% 50%;
-            -o-object-position: 50% 50%;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    .rank {
-        position: absolute;
-        font-size: 22px;
-        font-weight: 700;
-        top: 0;
-        left: 0;
-        background: $light;
-        color: $color_main;
-        padding-bottom: 9px;
-        padding-right: 13px;
-        padding-left: 5px;
-        border-bottom-right-radius: 25px;
-
-        .letter {
-            font-size: 14px;
-        }
-    }
-
-    .post-content {
-        padding-left: 12px;
-    }
-
-    .post-name {
-        font-size: 18px;
-        font-weight: 700;
-        color: $color_main_2;
-        margin-bottom: 0;
-    }
-
-    .post-academic {
-        color: #828282;
-        margin-bottom: 10px;
-        font-size: 13px;
-        display: block;
-    }
-
-    .info-doctor {
-        margin-bottom: 10px;
-
-        .item {
-            display: block;
-            font-size: 13px;
-            margin-bottom: 5px;
-        }
-    }
-
-    .link-more {
-        font-size: 13px;
-        color: $light;
-        font-weight: 700;
-        background-color: $color_main_2;
-        padding: 6px 12px;
-        border-radius: 25px;
-
-        &:hover {
-            background-color: $color_main;
-            color: $light;
-        }
-    }
-
-    .content-item {
-        display: block;
-    }
-
-    .post-item {
-        font-size: 12px;
-        margin-bottom: 0;
-    }
-
-    .post-last {
-        margin-bottom: 18px;
-    }
-}
-
+// 
 .post-ranks {
+    display: flex;
+    align-items: flex-start;
     .post-thumbnail {
         position: relative;
         width: 164px;
@@ -235,8 +137,7 @@
         border-radius: 25px;
         margin-right: 16px;
         margin-bottom: 16px;
-        float: left;
-
+        flex-shrink: 0;
         img {
             -o-object-fit: cover;
             object-fit: cover;
@@ -292,7 +193,7 @@
     .list-more {
         list-style: none;
         padding-left: 0;
-
+        margin-bottom: 0;
         .item {
             font-size: 13px;
             margin-bottom: 5px;
@@ -313,6 +214,19 @@
             border-right: 1px solid #CECECE;
             padding-right: 10px;
             margin-right: 10px;
+        }
+    }
+    .post-link-more{
+        font-size: 13px;
+        padding: 6px 12px;
+        background: $color_main_2;
+        color: $light;
+        border-radius: 25px;
+        font-weight: 700;
+        display: inline-block;
+        &:hover{
+            opacity: 0.8;
+            background: $color_main;
         }
     }
 }
@@ -416,8 +330,8 @@
 
     .ball {
         list-style: none;
-        width: 12px;
-        height: 12px;
+        width: 8px;
+        height: 8px;
         border-radius: 50%;
         background-color: #734895;
 

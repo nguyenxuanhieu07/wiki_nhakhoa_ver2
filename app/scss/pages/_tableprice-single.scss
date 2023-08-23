@@ -1,7 +1,8 @@
 .table-price-single {
-	.entry{
+	.entry {
 		margin-bottom: 0;
 	}
+
 	.page-title {
 		margin-bottom: 24px;
 	}
@@ -116,60 +117,71 @@
 			height: 180px;
 		}
 	}
-	.entry-content-bottom{
+
+	.entry-content-bottom {
 		margin-bottom: 50px;
 	}
-	.list-affecting{
-		.slick-dotted{
-			.slick-slider{
+
+	.list-affecting {
+		.slick-dotted {
+			.slick-slider {
 				margin-bottom: 50px;
 			}
 		}
-		.slick-dots{
-			li{
+
+		.slick-dots {
+			li {
 				margin-left: 0 4px;
-				button
-				{
-					&::before{
+
+				button {
+					&::before {
 						font-size: 10px;
 					}
 				}
 			}
-			.slick-active{
+
+			.slick-active {
 				button {
 					&::before {
 						opacity: 1;
 						color: $color_main_2;
 					}
 				}
-			} 
+			}
 		}
 	}
+
 	@media (max-width:575px) {
-		.list-doctors-table{
-			.inner{
+		.list-doctors-table {
+			.inner {
 				display: block;
 			}
-			.post-ranks{
+
+			.post-ranks {
 				width: 100%;
 				padding-right: 16px;
 			}
-			.post-meta{
+
+			.post-meta {
 				overflow: auto;
 			}
-			.post-thumbnail{
+
+			.post-thumbnail {
 				width: 100px;
 				aspect-ratio: 1;
 			}
-			.number-rank{
+
+			.number-rank {
 				padding: 2px 10px;
 			}
-			.point-rank{
-			border-top-right-radius: 0;
-			border-bottom-left-radius: 25px;
-			border-bottom-right-radius: 25px;
+
+			.point-rank {
+				border-top-right-radius: 0;
+				border-bottom-left-radius: 25px;
+				border-bottom-right-radius: 25px;
 			}
-			.list-status{
+
+			.list-status {
 				flex-direction: row;
 				justify-content: center;
 			}

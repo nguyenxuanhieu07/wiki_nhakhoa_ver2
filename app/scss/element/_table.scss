@@ -72,7 +72,7 @@ table {
 	margin-bottom: 50px;
 
 	table {
-		margin: 0 auto 33px;
+		margin: 0 auto;
 		width: 55%;
 		text-align: center;
 
@@ -85,29 +85,39 @@ table {
 			font-weight: 500;
 		}
 	}
+}
 
-	.table-desc {
-		margin-bottom: 26px;
-	}
+@media (max-width:575px) {
+	.price-table {
+		overflow: scroll;
+		max-height: 432px;
+		table {
+			white-space: nowrap;
 
-	.table-link {
-		margin-bottom: 0;
-
-		.link {
-			color: #2196F3;
-			text-decoration: underline;
+			th,
+			td {
+				padding: 14px 16px !important;
+			}
 		}
 	}
-}
-@media (max-width:575px) {
-	.price-table{
+
+	.compare-table {
 		overflow: scroll;
-		margin-bottom: 15px;
-		table{
-			white-space: nowrap;
+
+		table {
+			width: 1146px;
+
 			th,
-			td{
-				padding: 14px 16px;
+			td {
+				padding: 14px 16px !important;
+			}
+
+			tr {
+				&:not(:nth-child(3)) {
+					td {
+						text-align: left;
+					}
+				}
 			}
 		}
 	}
