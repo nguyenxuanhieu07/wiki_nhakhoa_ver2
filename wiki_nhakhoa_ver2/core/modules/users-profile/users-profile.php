@@ -180,7 +180,7 @@ if(!function_exists('wiki_ajax_get_author')){
                     ?>
                         <div class="item-author col-md-3">
                             <div class="post">
-                            <a href="#" class="post-thumbnail">
+                            <a href="<?php echo get_edit_user_link($id_user); ?>" class="post-thumbnail">
                                 <?php echo get_avatar( $id_user); ?>
                             </a>
                             <div class="post-content">

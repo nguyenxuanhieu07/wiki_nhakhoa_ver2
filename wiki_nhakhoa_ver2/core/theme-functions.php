@@ -168,7 +168,7 @@ function wiki_nhakhoa_scripts() {
 		wp_enqueue_script('slick', get_template_directory_uri() . '/assets/slick-1.6.0/slick.min.js', array('jquery-min'), '20151215', true);
 		wp_enqueue_script('bootraps-js', get_template_directory_uri() . '/assets/bootstrap-4.5.0-dist/js/bootstrap.min.js', array('jquery-min'), '221218', true);
 
-		wp_enqueue_script('main', get_template_directory_uri() . '/js/main.min.js', array('jquery-min'), '20151215', true);
+		wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery-min'), '20151215', true);
 		wp_localize_script('main', 'vmajax', array('ajaxurl' => admin_url('admin-ajax.php')) );
 		wp_localize_script('main', 'wikipost', array('posttype'=> get_post_type()) );
 	}
@@ -184,7 +184,7 @@ add_action( 'wp_enqueue_scripts', 'wiki_nhakhoa_scripts' );
  */
 function hide_editor() {
     // Thay thế 'post_type' bằng tên của post type mà bạn muốn ẩn trình soạn thảo
-	$post_type = array('doctor','brand');
+	$post_type = array('doctor','brand','table_price');
 	foreach ($post_type as $key => $value) {
 		remove_post_type_support($value, 'editor');
 	}

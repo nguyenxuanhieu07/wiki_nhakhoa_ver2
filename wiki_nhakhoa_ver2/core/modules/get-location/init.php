@@ -128,8 +128,8 @@ if(!function_exists('check_district')){
 add_action('wp_ajax_check_district', 'check_district');
 add_action('wp_ajax_nopriv_check_district', 'check_district');
 
-add_action( 'save_post', 'my_function_on_save_post' );
-function my_function_on_save_post( $post_id ) {
+add_action( 'save_post', 'save_doctor_district' );
+function save_doctor_district( $post_id ) {
 	if( isset($_POST['doctor_district']) && !empty($_POST['doctor_district'])){
 		foreach ($_POST['doctor_district'] as $key => $value) {
 			add_post_meta($post_id,'doctor_district',$value,false);

@@ -13,15 +13,14 @@ var scroll_ajax_2 = {
 						page_load = $( ".list-doctors .load-more" ).attr('data-load');
 						console.log('ngoài')
 					if(number_page > 1 && (page_load <= 3 || page_load == '') ){
-						console.log('trong')
 						ajax_load_post();
 					}
 	            }
 	         }
         });
-        var load_more = $('.load-more a.load-more-item');
+		var load_more=$('.list-doctors .load-more a.load-more-item');
         if(load_more.length > 0){
-	        $(document).on('click', '.load-more a.load-more-item', function(event) {
+			$(document).on('click', '.list-doctors .load-more a.load-more-item', function(event) {
 			    event.preventDefault();
 			    ajax_load_post();
 			});

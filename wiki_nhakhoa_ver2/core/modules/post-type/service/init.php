@@ -104,7 +104,7 @@ if(!function_exists('wb_create_service_cat')){
 			'show_tagcloud'              => true,
 			'rewrite'                    => $rewrite,
 		);
-		register_taxonomy( 'service_cat', array( 'service' ), $args );
+		register_taxonomy( 'service_cat', array( 'service'), $args );
 
 	}
 	add_action( 'init', 'wb_create_service_cat', 0 );

@@ -179,14 +179,14 @@ if(!function_exists('get_star_post')){
 if(!function_exists('reset_post_meta')){
 	function reset_post_meta(){
 		$args = array(
-		    'post_type' => 'brand', // Thay 'custom_post_type' bằng tên post type custom của bạn
+		    'post_type' => 'doctor', // Thay 'custom_post_type' bằng tên post type custom của bạn
 		    'posts_per_page' => -1, // Lấy tất cả các bài viết
 		);
 
 		$custom_posts = get_posts($args);
 		foreach ($custom_posts as $post) {
 			$post_id = $post->ID;
-			caculate_total_post('brand',$post_id);
+			caculate_total_post('doctor',$post_id);
 			update_post_meta($post_id,'comment-good',0);
 			update_post_meta($post_id,'comment-rather',0);
 			update_post_meta($post_id,'comment-bad',0);

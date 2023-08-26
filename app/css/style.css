@@ -4955,15 +4955,6 @@ table tr td:not(:last-child) {
   display: block;
 }
 
-.archive-content {
-  padding-top: 50px;
-  padding-bottom: 40px;
-}
-
-.archive-content .archive-desc {
-  margin-bottom: 50px;
-}
-
 .archive-item {
   margin-bottom: 16px;
 }
@@ -5483,41 +5474,50 @@ table tr td:not(:last-child) {
   border-radius: 50%;
   margin-bottom: 16px;
   display: block;
+  overflow: hidden;
 }
 
-.status-content .inner .inner-title {
+.status-content .inner .inner-img img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  -o-object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.status-content .inner-title {
   font-weight: 700;
   text-align: center;
   margin-bottom: 0;
 }
 
-.status-content .customer-choice {
+.customer-choice {
   padding: 16px;
   border: 1px solid #ECECEC;
   border-radius: 10px;
   margin-bottom: 50px;
 }
 
-.status-content .customer-choice .item-text {
+.customer-choice .item-text {
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.status-content .customer-choice .range {
+.customer-choice .range {
   background: #F6EEFF;
   border-radius: 10px;
   height: 30px;
 }
 
-.status-content .customer-choice .range:not(:last-child) {
+.customer-choice .range:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.status-content .customer-choice .range:last-child {
+.customer-choice .range:last-child {
   margin-bottom: 20px;
 }
 
-.status-content .customer-choice .range-number {
+.customer-choice .range-number {
   color: #fff;
   font-weight: 700;
   display: flex;
@@ -5526,11 +5526,11 @@ table tr td:not(:last-child) {
   height: 100%;
 }
 
-.status-content .customer-choice .full {
+.customer-choice .full {
   border-radius: 10px;
 }
 
-.status-content .customer-choice .range-inner {
+.customer-choice .range-inner {
   background: #DEC5F9;
   height: 100%;
   border-top-left-radius: 10px;
@@ -5538,21 +5538,21 @@ table tr td:not(:last-child) {
   width: 40%;
 }
 
-.status-content .customer-choice .last-item {
+.customer-choice .last-item {
   width: 20%;
 }
 
-.status-content .customer-choice .choice-desc {
+.customer-choice .choice-desc {
   margin-bottom: 24px;
 }
 
-.status-content .customer-choice .choice-action {
+.customer-choice .choice-action {
   display: flex;
   justify-content: center;
 }
 
-.status-content .customer-choice .btn-view,
-.status-content .customer-choice .btn-choice {
+.customer-choice .btn-view,
+.customer-choice .btn-choice {
   background: #FF898B;
   color: #fff;
   font-weight: 700;
@@ -5560,44 +5560,44 @@ table tr td:not(:last-child) {
   border-radius: 10px;
 }
 
-.status-content .customer-choice .btn-view:hover,
-.status-content .customer-choice .btn-choice:hover {
+.customer-choice .btn-view:hover,
+.customer-choice .btn-choice:hover {
   opacity: 0.8;
 }
 
-.status-content .customer-choice .btn-view {
+.customer-choice .btn-view {
   margin-right: 16px;
 }
 
-.status-content .customer-choice .btn-choice {
+.customer-choice .btn-choice {
   background: #734895;
 }
 
-.status-content .toplist-faq {
+.toplist-faq {
   padding: 0;
   background: #fff;
 }
 
-.status-content .toplist-faq .item-faq {
+.toplist-faq .item-faq {
   width: 100%;
 }
 
-.status-content .toplist-faq .item-faq:last-child {
+.toplist-faq .item-faq:last-child {
   margin-bottom: 24px;
 }
 
-.status-content .comment-form {
+.comment-form {
   background-color: #F6EEFF;
   border: none;
 }
 
-.status-content .comment-form .comment-title {
+.comment-form .comment-title {
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
-.status-content .comment-form .inner {
+.comment-form .inner {
   border: 1px solid #734895;
   padding: 8px;
   text-align: center;
@@ -5610,11 +5610,11 @@ table tr td:not(:last-child) {
   background: #fff;
 }
 
-.status-content .comment-form .select-option {
+.comment-form .select-option {
   position: relative;
 }
 
-.status-content .comment-form .select-option::after {
+.comment-form .select-option::after {
   content: '';
   position: absolute;
   background: url(../images/service/checked.png) no-repeat;
@@ -5624,13 +5624,13 @@ table tr td:not(:last-child) {
   left: 0;
 }
 
-.status-content .comment-form #comment,
-.status-content .comment-form .form-control {
+.comment-form #comment,
+.comment-form .form-control {
   background: #fff;
 }
 
 @media (max-width: 575px) {
-  .status-content .comment-form .inner {
+  .comment-form .inner {
     padding: 8px 6px;
   }
 }
@@ -5669,6 +5669,12 @@ table tr td:not(:last-child) {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.table-price .list-tableprice .inner-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .table-price .list-tableprice .title-link {
@@ -5680,6 +5686,15 @@ table tr td:not(:last-child) {
 
 .table-price .list-tableprice .inner-desc {
   margin-bottom: 24px;
+}
+
+.table-price .list-tableprice .inner-desc p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  margin-bottom: 0;
 }
 
 .table-price .list-tableprice .inner-btn {
@@ -5782,7 +5797,7 @@ table tr td:not(:last-child) {
 }
 
 .table-price-single .list-doctors-table .post-ranks {
-  padding: 17px 0 17px 16px;
+  padding: 17px 16px 17px 16px;
   width: 75%;
 }
 

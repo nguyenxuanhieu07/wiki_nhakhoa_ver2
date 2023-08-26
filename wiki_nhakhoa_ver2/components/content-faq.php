@@ -1,10 +1,10 @@
 <?php 
-    $faq  = rwmb_meta( 'toplist-faq') ? rwmb_meta( 'toplist-faq') : [];
+    $faq  = isset($args['data']) ? $args['data'] : []; 
 ?>
 <section class="toplist-faq">
     <a href="#" id="faq"></a>
     <div class="container">
-        <h2 class="faq-title">Câu hỏi thường gặp</h2>
+        <h2 class="single-title">Câu hỏi thường gặp</h2>
         <div class="list-faq">
             <?php 
             foreach ($faq as $key => $value) { 

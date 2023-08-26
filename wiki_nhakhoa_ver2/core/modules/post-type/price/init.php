@@ -56,7 +56,7 @@ if(!function_exists('wb_create_post_type_price_wiki')){
 			'rewrite'               => $rewrite,
 			'capability_type'       => 'post',
 		);
-		register_post_type( 'price', $args );
+		register_post_type( 'table_price', $args );
 
 	}
 	add_action( 'init', 'wb_create_post_type_price_wiki', 0 );
