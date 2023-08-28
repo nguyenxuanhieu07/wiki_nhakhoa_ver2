@@ -74,7 +74,7 @@ get_header();
                                 while($list_post->have_posts()) : $list_post->the_post();
                                 ?>
                                     <div class="col-md-6">
-                                        <?php get_template_part('components/post','rank'); ?>
+                                        <?php get_template_part('components/post','ranks'); ?>
                                     </div>
                                 <?php
                                 endwhile;
@@ -106,7 +106,7 @@ get_header();
                                 while($list_post->have_posts()) : $list_post->the_post();
                                 ?>
                                     <div class="col-md-3 brand-item">
-                                        <?php get_template_part('components/content','post'); ?>
+                                        <?php get_template_part('components/post-ranks','brand'); ?>
                                     </div>
                                 <?php
                                 endwhile;

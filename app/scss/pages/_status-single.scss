@@ -73,164 +73,152 @@
 			border-radius: 50%;
 			margin-bottom: 16px;
 			display: block;
-			overflow: hidden;
+		}
 
-			img {
-				object-fit: cover;
-				object-position: 50% 50%;
-				-o-object-position: 50% 50%;
-				width: 100%;
-				height: 100%;
+		.inner-title {
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: 0;
+		}
+	}
+
+	.customer-choice {
+		padding: 16px;
+		border: 1px solid #ECECEC;
+		border-radius: 10px;
+		margin-bottom: 50px;
+
+		.item-text {
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.range {
+			background: #F6EEFF;
+			border-radius: 10px;
+			height: 30px;
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+
+			&:last-child {
+				margin-bottom: 20px;
+			}
+		}
+
+		.range-number {
+			color: $light;
+			font-weight: 700;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		.full {
+			border-radius: 10px;
+		}
+
+		.range-inner {
+			background: #DEC5F9;
+			height: 100%;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			width: 40%;
+		}
+
+		.last-item {
+			width: 20%;
+		}
+
+		.choice-desc {
+			margin-bottom: 24px;
+		}
+
+		.choice-action {
+			display: flex;
+			justify-content: center;
+		}
+
+		.btn-view,
+		.btn-choice {
+			background: $color_main;
+			color: $light;
+			font-weight: 700;
+			padding: 8px 16px;
+			border-radius: 10px;
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		.btn-view {
+			margin-right: 16px;
+		}
+
+		.btn-choice {
+			background: $color_main_2;
+		}
+	}
+
+	.toplist-faq {
+		padding: 0;
+		background: $light;
+
+		.item-faq {
+			width: 100%;
+
+			&:last-child {
+				margin-bottom: 24px;
 			}
 		}
 	}
 
-	.inner-title {
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: 0;
-	}
-}
+	.comment-form {
+		background-color: #F6EEFF;
+		border: none;
 
-.customer-choice {
-	padding: 16px;
-	border: 1px solid #ECECEC;
-	border-radius: 10px;
-	margin-bottom: 50px;
-
-	.item-text {
-		font-weight: 700;
-		margin-bottom: 8px;
-	}
-
-	.range {
-		background: #F6EEFF;
-		border-radius: 10px;
-		height: 30px;
-
-		&:not(:last-child) {
-			margin-bottom: 16px;
+		.comment-title {
+			font-size: 18px;
+			text-transform: uppercase;
+			margin-bottom: 18px;
 		}
-
-		&:last-child {
-			margin-bottom: 20px;
-		}
-	}
-
-	.range-number {
-		color: $light;
-		font-weight: 700;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-	}
-
-	.full {
-		border-radius: 10px;
-	}
-
-	.range-inner {
-		background: #DEC5F9;
-		height: 100%;
-		border-top-left-radius: 10px;
-		border-bottom-left-radius: 10px;
-		width: 40%;
-	}
-
-	.last-item {
-		width: 20%;
-	}
-
-	.choice-desc {
-		margin-bottom: 24px;
-	}
-
-	.choice-action {
-		display: flex;
-		justify-content: center;
-	}
-
-	.btn-view,
-	.btn-choice {
-		background: $color_main;
-		color: $light;
-		font-weight: 700;
-		padding: 8px 16px;
-		border-radius: 10px;
-
-		&:hover {
-			opacity: 0.8;
-		}
-	}
-
-	.btn-view {
-		margin-right: 16px;
-	}
-
-	.btn-choice {
-		background: $color_main_2;
-	}
-}
-
-.toplist-faq {
-	padding: 0;
-	background: $light;
-
-	.item-faq {
-		width: 100%;
-
-		&:last-child {
-			margin-bottom: 24px;
-		}
-	}
-}
-
-.comment-form {
-	background-color: #F6EEFF;
-	border: none;
-
-	.comment-title {
-		font-size: 18px;
-		text-transform: uppercase;
-		margin-bottom: 18px;
-	}
-
-	.inner {
-		border: 1px solid $color_main_2;
-		padding: 8px;
-		text-align: center;
-		cursor: pointer;
-		border-radius: 5px;
-		display: block;
-		width: 100%;
-		height: auto;
-		margin-bottom: 12px;
-		background: $light;
-	}
-
-	.select-option {
-		position: relative;
-
-		&::after {
-			content: '';
-			position: absolute;
-			background: url(../images/service/checked.png) no-repeat;
-			width: 20px;
-			height: 20px;
-			top: 0;
-			left: 0;
-		}
-	}
-
-	#comment,
-	.form-control {
-		background: $light;
-	}
-
-	@media (max-width:575px) {
 		.inner {
-			padding: 8px 6px;
+			border: 1px solid $color_main_2;
+			padding: 8px;
+			text-align: center;
+			cursor: pointer;
+			border-radius: 5px;
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-bottom: 12px;
+			background: $light;
+		}
+
+		.select-option {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				background: url(../images/service/checked.png) no-repeat;
+				width: 20px;
+				height: 20px;
+				top: 0;
+				left: 0;
+			}
+		}
+		#comment,
+		.form-control{
+			background: $light;
+		}	
+		@media (max-width:575px) {
+			.inner{
+				padding: 8px 6px;
+			}
 		}
 	}
 }

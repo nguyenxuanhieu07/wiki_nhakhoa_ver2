@@ -91,7 +91,7 @@
                     if($list_post->have_posts()) {
                         $i = 1;
                         while ( $list_post->have_posts() ) : $list_post->the_post();
-                        $args = array( 'key' => $i );
+                        $args = array( 'rank' => $i );
                         $post_id = get_the_ID();
                         $total_ratting_comment = get_post_meta( $post_id, 'total-ratting-post', true ) ? get_post_meta( $post_id, 'total-ratting-post', true ) : 0;
                         $expert_desc = rwmb_meta('expert-desc') ? rwmb_meta('expert-desc') : '';
@@ -100,7 +100,7 @@
                         $expert_exp_specialize = rwmb_meta('expert-exp-specialize') ? rwmb_meta('expert-exp-specialize') : '';
                     ?>
                     <div class="toplist-item">
-                        <?php get_template_part('components/post','rank',$args); ?>
+                        <?php get_template_part('components/post','ranks',$args); ?>
                         <div class="row toplist-point">
                             <div class="col-md-6 mb-2">
                                 <div class="point-doctor">

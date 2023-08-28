@@ -126,6 +126,7 @@
     }
 }
 
+// 
 .post-ranks {
     display: flex;
     align-items: flex-start;
@@ -171,8 +172,19 @@
         .link {
             margin-right: 8px;
         }
+        &-brand{
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            a{
+                color: $color_main_2;
+                &:hover{
+                    color: $color_main;
+                }
+            }
+        }
     }
-
+    
     .post-academic {
         color: #9A9A9A;
         font-weight: 500;

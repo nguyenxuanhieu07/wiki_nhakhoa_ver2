@@ -1,34 +1,47 @@
 <?php
-$rank         = isset($args['rank']) ? $args['rank'] : 0;
-$name_service = isset($args['id_service']) ? $args['rank']->name : '';
+$rank = isset($args['rank']) ? $args['rank'] : 0;
+$name_service = isset($args['id_service']) ? $args['id_service']->name : '';
+$show_more = isset($args['link']) ? $args['link'] : '';
 if (!$name_service) {
 	$primary_service = rwmb_meta('expert-list-service') ? rwmb_meta('expert-list-service') : '';
-	$name_service    = $primary_service ? $primary_service[0]->name : '';
+	$name_service = $primary_service ? $primary_service[0]->name : '';
 }
-$post_id                   = get_the_ID();
-$name                      = rwmb_meta('expert-name') ? rwmb_meta('expert-name') : get_the_title();
-$chuc_vu                   = rwmb_meta('expert-office') ? rwmb_meta('expert-office') : [];
-$chuc_vu                   = implode(",", $chuc_vu);
-$exp                       = rwmb_meta('expert-exp') ? rwmb_meta('expert-exp') : '';
-$expert_custom_number      = rwmb_meta('expert-custom-number') ? rwmb_meta('expert-custom-number') : '';
+$post_id = get_the_ID();
+$name = rwmb_meta('expert-name') ? rwmb_meta('expert-name') : get_the_title();
+$chuc_vu = rwmb_meta('expert-office') ? rwmb_meta('expert-office') : [];
+$chuc_vu = implode(",", $chuc_vu);
+$exp = rwmb_meta('expert-exp') ? rwmb_meta('expert-exp') : '';
+$expert_custom_number = rwmb_meta('expert-custom-number') ? rwmb_meta('expert-custom-number') : '';
 $expert_custom_number_wiki = rwmb_meta('expert-custom-number-wiki') ? rwmb_meta('expert-custom-number-wiki') : '';
-$get_comments_number       = get_comments_number($post_id);
-$star_post                 = get_star_post($post_id);
+$get_comments_number = get_comments_number($post_id);
+$star_post = get_star_post($post_id);
 ?>
 <div class="post-ranks">
 	<a href="<?php the_permalink($post_id); ?>" class="post-thumbnail">
 		<?php the_post_thumbnail($post_id, 'thumbnail'); ?>
 		<?php
 		if ($rank) {
-			?>
+		?>
 			<span class="number-rank">#<span class="number">
 					<?php echo $rank; ?>
 				</span></span>
 		<?php } ?>
 	</a>
 	<div class="post-meta">
-		<h3 class="post-name"><a href="<?php the_permalink($post_id); ?>" class="link"><?php echo $name; ?></a><img
-				src="images/check.png" alt=""></h3>
+		<?php
+		if (is_singular('doctor')) :
+		?>
+			<h1 class="post-name"><a href="<?php the_permalink($post_id); ?>" class="link"><?php echo $name; ?></a></h1>
+		<?php
+		else :
+		?>
+			<h3 class="post-name">
+				<a href="<?php the_permalink($post_id); ?>" class="link"><?php echo $name; ?></a>
+				<?php if (is_archive()) : ?>
+					<img src="<?php echo THEME_URI; ?>/images/check.png" alt="">
+				<?php endif; ?>
+			</h3>
+		<?php endif; ?>
 		<p class="post-academic">
 			<?php echo $chuc_vu; ?>
 		</p>
@@ -68,5 +81,8 @@ $star_post                 = get_star_post($post_id);
 				</li>
 			</ul>
 		</div>
+		<?php if ($show_more) : ?>
+			<a href="<?php the_permalink($post_id); ?>" class="post-link-more">Xem chi tiết</a>
+		<?php endif; ?>
 	</div>
 </div>

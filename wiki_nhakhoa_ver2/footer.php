@@ -1,15 +1,15 @@
 <?php
-$options      = get_option('wiki-theme-options');
-$id_logo_mb   = isset($options['logo-wiki-mb']) ? $options['logo-wiki-mb'][0] : '';
+$options = get_option('wiki-theme-options');
+$id_logo_mb = isset($options['logo-wiki-mb']) ? $options['logo-wiki-mb'][0] : '';
 $number_phone = isset($options['numberphone']) ? $options['numberphone'] : '#';
-$url          = wp_get_attachment_url($id_logo_mb);
+$url = wp_get_attachment_url($id_logo_mb);
 $address_wiki = isset($options['address_wiki']) ? $options['address_wiki'] : '';
-$email_wiki   = isset($options['email_wiki']) ? $options['email_wiki'] : '';
-$facebook     = isset($options['fb_wiki']) ? $options['fb_wiki'] : '#';
-$twiter       = isset($options['tw_wiki']) ? $options['tw_wiki'] : '#';
-$instagram    = isset($options['ins_wiki']) ? $options['ins_wiki'] : '#';
-$youtube      = isset($options['you_wiki']) ? $options['you_wiki'] : '#';
-$zalo         = isset($options['zalo_wiki']) ? $options['zalo_wiki'] : '#';
+$email_wiki = isset($options['email_wiki']) ? $options['email_wiki'] : '';
+$facebook = isset($options['fb_wiki']) ? $options['fb_wiki'] : '#';
+$twiter = isset($options['tw_wiki']) ? $options['tw_wiki'] : '#';
+$instagram = isset($options['ins_wiki']) ? $options['ins_wiki'] : '#';
+$youtube = isset($options['you_wiki']) ? $options['you_wiki'] : '#';
+$zalo = isset($options['zalo_wiki']) ? $options['zalo_wiki'] : '#';
 ?>
 <footer class="footer">
     <div class="container">
@@ -20,7 +20,7 @@ $zalo         = isset($options['zalo_wiki']) ? $options['zalo_wiki'] : '#';
                 wp_nav_menu(
                     array(
                         'theme_location' => 'footer-about-menu',
-                        'menu_class'     => 'list-footer',
+                        'menu_class' => 'list-footer',
                     )
                 );
                 ?>
@@ -31,7 +31,7 @@ $zalo         = isset($options['zalo_wiki']) ? $options['zalo_wiki'] : '#';
                 wp_nav_menu(
                     array(
                         'theme_location' => 'footer-policy-menu',
-                        'menu_class'     => 'list-footer',
+                        'menu_class' => 'list-footer',
                     )
                 );
                 ?>
@@ -42,7 +42,7 @@ $zalo         = isset($options['zalo_wiki']) ? $options['zalo_wiki'] : '#';
                 wp_nav_menu(
                     array(
                         'theme_location' => 'footer-cate-menu',
-                        'menu_class'     => 'list-footer',
+                        'menu_class' => 'list-footer',
                     )
                 );
                 ?>
@@ -105,15 +105,13 @@ $zalo         = isset($options['zalo_wiki']) ? $options['zalo_wiki'] : '#';
 </footer>
 <?php get_template_part('template-parts/action', 'cta'); ?>
 <div class="cta-action">
-    <a href="tel:<?php echo $number_phone; ?>" class="cta-link"><img
-            src="<?php echo THEME_URI; ?>/images/icons/icon-phone.png" alt="" />
-    </a>
-    <a href="<?php echo $facebook; ?>" class="cta-link"><img src="<?php echo THEME_URI; ?>/images/icons/icon-mess.png"
-            alt="" />
-    </a>
-    <a href="<?php echo $zalo; ?>" class="cta-link"><img src="<?php echo THEME_URI; ?>/images/icons/icon-zalo.png"
-            alt="" />
-    </a>
+    <div class="animation cta-link">
+        <div class="coccoc-alo-ph-circle"></div>
+        <div class="coccoc-alo-ph-circle-fill"></div>
+        <a href="tel:<?php echo $number_phone; ?>" class=" phone"><img src="<?php echo THEME_URI; ?>/images/icons/icon-phone.png" alt="" /></a>
+    </div>
+    <a href="<?php echo $facebook; ?>" class="cta-link"><img src="<?php echo THEME_URI; ?>/images/icons/icon-mess.png" alt="" /></a>
+    <a href="<?php echo $zalo; ?>" class="cta-link"><img src="<?php echo THEME_URI; ?>/images/icons/icon-zalo.png" alt="" /></a>
 </div>
 </div><!-- #page -->
 

@@ -1,14 +1,13 @@
 .quick-info{
     padding-top: 45px;
-    .post-rank{
+    .post-ranks{
         box-shadow: none;
+        margin-bottom: 30px;
         .post-thumbnail{
             width: 128px;
-            height: 128px;
-            img{
-                border: 1px solid #DBDBDB;
-                background-color: $light;
-            }
+            aspect-ratio: 128/128;
+            border: 1px solid #DBDBDB;
+            overflow: hidden;
         }
         .post-content{
             font-size: 13px;
@@ -192,14 +191,16 @@
     }
 }
 .info-doctor{
-    .post-rank{
+    .post-ranks{
         box-shadow: 0 0 6px rgba($color:  #D6B2FF, $alpha: 0.5);
         border: none;
         justify-content: unset;
+        border-radius: 25px;
+        padding: 16px;
         .post-thumbnail{
-            aspect-ratio: 1;
+            aspect-ratio: 164/164;
             width: 164px;
-            height: 164px;
+            margin-bottom: 0;
         }
         .info-brand{
             font-size: 14px;

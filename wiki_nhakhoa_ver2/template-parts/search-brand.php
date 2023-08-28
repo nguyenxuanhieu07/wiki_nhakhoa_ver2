@@ -1,4 +1,4 @@
-<main class="category-page category-brand category-experts">
+<main class="category-page search-page">
 	<?php get_template_part('components/search-location'); ?>
 	<div class="breadcrumb-nav mb-5">
 		<?php get_template_part('components/breadcrumb'); ?>
@@ -48,7 +48,7 @@
 					$count = $list_post->found_posts;
 					echo '<h1 class="archive-title">Có <span>'. $count .'</span> Cơ sở phù hợp</h1>';
 					while($list_post->have_posts()) : $list_post->the_post();
-						get_template_part('components/post-brand');
+						get_template_part('components/post-ranks-brand');
 					endwhile;
 					wiki_pagination($list_post);
 					wp_reset_postdata(); 

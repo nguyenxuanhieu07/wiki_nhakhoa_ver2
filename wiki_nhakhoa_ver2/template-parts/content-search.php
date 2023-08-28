@@ -9,7 +9,7 @@
 
 ?>
 
-<main class="page-archive">
+<main class="page-archive page-search">
 	<div class="breadcrumb-nav">
 		<?php get_template_part('components/breadcrumb'); ?>
 	</div>

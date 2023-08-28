@@ -583,13 +583,77 @@ strong {
   margin-bottom: 20px;
 }
 
+.list-doctor-brand {
+  margin-bottom: 32px;
+}
+
+.list-doctor-brand .post-ranks:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.search-page .post-ranks {
+  padding: 16px;
+  border-radius: 25px;
+  box-shadow: 0 0 6px rgba(214, 178, 255, .5);
+}
+
+.table-search {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table-search .btn-search-table {
+  padding: 6px 14px;
+  color: #fff;
+  background: #734895;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.table-search .select-table {
+  width: 30%;
+  margin-right: 10px;
+  height: auto;
+}
+
+.search-page .post-ranks .post-thumbnail {
+  margin-bottom: 0;
+}
+
+.specialist .entry .list-brand .post-ranks {
+  flex-direction: column;
+  padding: 16px;
+  box-shadow: 0 0 6px rgba(214, 178, 255, .5);
+  border-radius: 25px;
+}
+
+.search-table-brand {
+
+  position: relative;
+}
+
+.brand-table table {
+  width: 100%;
+}
+
+.specialist .entry .list-brand .post-ranks .post-thumbnail {
+  height: 231px;
+  width: 100%;
+  aspect-ratio: 231/231;
+}
+
+.search-page .post-ranks:not(:last-child) {
+  margin-bottom: 24px;
+}
+
 .service-top .list-service .icon img {
   width: 72px;
   height: 72px;
 }
 
 .hero-section .img-desk {
-  height: 500px;
+  height: 100%;
 }
 
 .hero-section .img-mb {

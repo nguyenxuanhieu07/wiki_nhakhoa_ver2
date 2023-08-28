@@ -1,35 +1,13 @@
 var slider_2 = {
-    init : function(){
-        slider_2.service_top();
+    init: function () {
         slider_2.list_img_certificate();
         slider_2.list_infrastructure();
     }
     ,
-    service_top: function () {
-        var list_slide = $(".service-top .list-service");
-        var number_slide = $(".service-top .list-service .item-service").length;
-       if (list_slide.length > 0 && number_slide >= 4) {
-            list_slide.slick({
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                mobileFirst: true,
-                arrows: false,
-                dots: true,
-                // centerMode: true,
-                // centerPadding: '40px',
-                responsive: [
-                {
-                    breakpoint: 575,
-                    settings: "unslick",
-                },
-                ],
-            });
-        }
-    },
     list_infrastructure: function () {
         var list_slide = $(".list-infrastructure");
         var number_slide = $(".list-infrastructure .item").length;
-       if (list_slide.length > 0 && number_slide >= 2) {
+        if (list_slide.length > 0 && number_slide >= 2) {
             list_slide.slick({
                 slidesToShow: 2,
                 slidesToScroll: 2,
@@ -39,15 +17,15 @@ var slider_2 = {
                 // centerMode: true,
                 // centerPadding: '40px',
                 responsive: [
-                {
-                    breakpoint: 575,
-                    settings: "unslick",
-                },
+                    {
+                        breakpoint: 575,
+                        settings: "unslick",
+                    },
                 ],
             });
         }
     },
-    list_img_certificate : function(){
+    list_img_certificate: function () {
         var list_slide = $(".list-img-certificate");
         var number_slide = $(".list-img-certificate .img-item").length;
         if (list_slide.length > 0 && number_slide > 4) {
@@ -59,49 +37,40 @@ var slider_2 = {
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 responsive: [
-                {
-                    breakpoint: 575,
-                    settings: {
-                    slidesToShow: 1.8,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false,
-                    centerMode: false,
-                    arrows: false,
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1.8,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: false,
+                            centerMode: false,
+                            arrows: false,
+                        },
                     },
-                },
                 ],
             });
         }
     }
 }
-var show_list_service_mb_2 = {
-  init: function () {
-    var list_service_cat = $(".experts-specialist .item");
-    list_service_cat.on("click", function () {
-        $content = $(this).html();
-        $('.fist-item').html($content);
-    });
-  },
-};
 var show_more_toplist = {
-    init : function(){
+    init: function () {
         var link_more = $('.toplist-item .item-more');
-        if(link_more.length > 0){
-            link_more.on('click',function(){
-                var tag =$(this);
+        if (link_more.length > 0) {
+            link_more.on('click', function () {
+                var tag = $(this);
                 var ul = $(this).parent().find('ul');
                 var li = ul.find('li');
-                if(ul.length > 0 && li.length > 2){
-                    li.each(function( index ) {
-                        if(index > 1){
-                            if(!$(this).hasClass('active')){
-                                $(this).css('display','list-item');
+                if (ul.length > 0 && li.length > 2) {
+                    li.each(function (index) {
+                        if (index > 1) {
+                            if (!$(this).hasClass('active')) {
+                                $(this).css('display', 'list-item');
                                 $(this).addClass('active');
-                                console.log( $(this))
+                                console.log($(this))
                                 tag.html('Ẩn bớt');
-                            }else{
-                                $(this).css('display','none');
+                            } else {
+                                $(this).css('display', 'none');
                                 $(this).removeClass('active');
                                 tag.html('Xem thêm');
                             }
@@ -113,18 +82,18 @@ var show_more_toplist = {
     }
 }
 var form_sidebar = {
-    init: function(){
+    init: function () {
         var question_form = $('form.form-register-sidebar');
-		if (question_form.length > 0) {
+        if (question_form.length > 0) {
             question_form.on('submit', function () {
                 var container = $(this);
                 var type = "Đặt lịch khám";
-                form_sidebar.send_questions(container,type);
+                form_sidebar.send_questions(container, type);
                 return false;
             });
-        }	
+        }
     },
-    send_questions: function (container,type) {
+    send_questions: function (container, type) {
         var form_data = new FormData();
         var fullname = $(container).find('[name="fullname"]').val();
         var email = $(container).find('[name="email"]').val();
@@ -146,7 +115,7 @@ var form_sidebar = {
         form_data.append('service', list_service);
         form_data.append('address', address);
         form_data.append('content', content);
-		form_data.append('type', type);
+        form_data.append('type', type);
         form_data.append('data_url', data_url);
         form_data.append('referer', referer);
         form_data.append('action', 'questions_form');
@@ -203,15 +172,14 @@ var form_sidebar = {
 }
 jQuery(document).ready(function () {
     slider_2.init();
-    show_list_service_mb_2.init();
     show_more_toplist.init();
     form_sidebar.init();
 
     var link_more = $('.toplist-item .item-more');
-    link_more.each(function( index ) {
+    link_more.each(function (index) {
         var li = $(this).parent().find('ul li');
         $(this).hide();
-        if(li.length > 2){
+        if (li.length > 2) {
             $(this).show();
         }
     });

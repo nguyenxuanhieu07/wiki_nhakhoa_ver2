@@ -33,7 +33,7 @@ var slider={
   service_top: function() {
     var list_slide=$(".service-top .list-service");
     var number_slide=$(".service-top .list-service .item-service").length;
-    if(list_slide.length>0&&number_slide>=6) {
+    if(list_slide.length>0&&number_slide>6) {
       list_slide.slick({
         dots: false,
         arrow: true,
@@ -41,7 +41,7 @@ var slider={
         // autoplay: true,
         autoplaySpeed: 3000,
         slidesToShow: 6,
-        slidesToScroll: 1,
+        slidesToScroll: 6,
         responsive: [
           {
             breakpoint: 575,
@@ -53,6 +53,20 @@ var slider={
               centerMode: false,
               arrows: false,
             },
+          },
+        ],
+      });
+    } else {
+      list_slide.slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        mobileFirst: true,
+        arrows: false,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 575,
+            settings: "unslick",
           },
         ],
       });
@@ -692,15 +706,22 @@ var link_more_entry={
 }
 var ajax_home={
   init: function() {
+    ajax_home.experts_special();
+    ajax_home.list_address();
+    ajax_home.show_list_service_mb();
+  },
+  experts_special: function() {
     $experts_special=$('.experts-specialist');
-    $list_address=$('.brand-top-content .list-address');
     if($experts_special.length>0) {
       $experts_special.on('click','a',function() {
         var id=$(this).parent().attr('data-id');
+        var content=$(this).html();
+        $('.fist-item').html(content);
         $('.experts-specialist a').each(function(index) {
           $(this).removeClass('active');
         });
         $(this).addClass('active');
+        $('.fist-item').addClass('active');
         $experts_special.removeClass('active');
         var form_data=new FormData();
         form_data.append('action','wiki_ajax_get_doctor');
@@ -712,48 +733,59 @@ var ajax_home={
           contentType: false,
           processData: false,
           beforeSend: function() {
-            $(".connect-doctor-main .loader").css('display','flex');
+            $(".connect-doctor-top .loader").css('display','flex');
             $(".connect-doctor-content").css('opacity',0.5);
           },
           success: function(result) {
             $(".connect-doctor-content").empty();
             $(".connect-doctor-content").html(result.data);
-            $(".connect-doctor-main .loader").hide();
+            $(".connect-doctor-top .loader").hide();
             $(".connect-doctor-content").css('opacity',1);
           },
         });
         return false;
       });
-      if($list_address.length>0) {
-        $list_address.on('click','li',function() {
-          var id=$(this).attr('data-id');
-          $('.brand-top-content .list-address .item').each(function(index) {
-            $(this).removeClass('active');
-          });
-          $(this).addClass('active');
-          var form_data=new FormData();
-          form_data.append('action','wiki_ajax_get_brand');
-          form_data.append('id',id);
-          $.ajax({
-            url: vmajax.ajaxurl,
-            type: 'POST',
-            data: form_data,
-            contentType: false,
-            processData: false,
-            beforeSend: function() {
-              $(".brand-top-content .loader").css('display','flex');
-              $(".list-brand").css('opacity',0.5);
-            },
-            success: function(result) {
-              $(".list-brand").empty();
-              $(".list-brand").html(result.data);
-              $(".brand-top-content .loader").hide();
-              $(".list-brand").css('opacity',1);
-            },
-          });
-          return false;
+    }
+  },
+  list_address: function() {
+    $list_address=$('.brand-top-content .list-address');
+    if($list_address.length>0) {
+      $list_address.on('click','li',function() {
+        var id=$(this).attr('data-id');
+        $('.brand-top-content .list-address .item').each(function(index) {
+          $(this).removeClass('active');
         });
-      }
+        $(this).addClass('active');
+        var form_data=new FormData();
+        form_data.append('action','wiki_ajax_get_brand');
+        form_data.append('id',id);
+        $.ajax({
+          url: vmajax.ajaxurl,
+          type: 'POST',
+          data: form_data,
+          contentType: false,
+          processData: false,
+          beforeSend: function() {
+            $(".brand-top-content .loader").css('display','flex');
+            $(".list-brand").css('opacity',0.5);
+          },
+          success: function(result) {
+            $(".list-brand").empty();
+            $(".list-brand").html(result.data);
+            $(".brand-top-content .loader").hide();
+            $(".list-brand").css('opacity',1);
+          },
+        });
+        return false;
+      });
+    }
+  },
+  show_list_service_mb: function() {
+    var list=$(".experts-specialist");
+    if(list.length>0) {
+      list.on("click",function() {
+        $(this).toggleClass("active")
+      })
     }
   }
 }
@@ -947,10 +979,10 @@ var show_more={
   table_price_brands: function() {
     jQuery('.list-brand-address .link-more').on('click',function() {
       var element=jQuery(this).parents('.list-brand-address').find('.table-brand-address');
-      var btn_link = $(this);
-      if(!element.hasClass('d-none')){
+      var btn_link=$(this);
+      if(!element.hasClass('d-none')) {
         btn_link.html('Xem thêm');
-      }else{
+      } else {
         btn_link.html('Ẩn bớt');
       }
       jQuery.each(element,function(index) {
@@ -991,6 +1023,38 @@ var ajax_posttype_table={
     });
   },
 }
+var search_table={
+  init: function() {
+    search_table.brand_search_table();
+  },
+  brand_search_table: function() {
+    var btn_search=$('.btn-search-table');
+    if(btn_search.length>0) {
+      btn_search.on('click',function() {
+        var id_term=$('.select-table').val();
+        var post_id=$('.select-table').attr('post');
+        $('.brand-table').css('opacity',0.8);
+        $('.search-table-brand .loader').css('display','flex');
+        jQuery.ajax({
+          type: "POST",
+          url: vmajax.ajaxurl,
+          data: {
+            'id_term': id_term,
+            'post_id': post_id,
+            'action': 'get_table_service',
+          },
+          success: function(result) {
+            $('.brand-table').empty();
+            $('.brand-table').append(result.data);
+            $('.brand-table').css('opacity',1);
+            $('.search-table-brand .loader').css('display','none');
+          }
+        });
+        return false;
+      });
+    }
+  }
+}
 jQuery(document).ready(function() {
   general.init();
   search_banner.init();
@@ -1012,4 +1076,5 @@ jQuery(document).ready(function() {
   status_select_option.init();
   show_more.init();
   ajax_posttype_table.init();
+  search_table.init();
 });

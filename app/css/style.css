@@ -447,6 +447,20 @@ table tr td:not(:last-child) {
   margin-right: 8px;
 }
 
+.post-ranks .post-name-brand {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.post-ranks .post-name-brand a {
+  color: #734895;
+}
+
+.post-ranks .post-name-brand a:hover {
+  color: #FF898B;
+}
+
 .post-ranks .post-academic {
   color: #9A9A9A;
   font-weight: 500;
@@ -3323,23 +3337,19 @@ table tr td:not(:last-child) {
   border-radius: 25px;
   display: flex;
   margin-bottom: 16px;
+  justify-content: space-between;
 }
 
 .list-doctors .top-item {
   padding-right: 0;
 }
 
-.list-doctors .post-rank {
+.list-doctors .post-ranks {
   margin-bottom: 0;
   box-shadow: none;
-  padding: 16px 10px;
+  padding: 16px 17px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-right: 1px solid #EFEFEF;
-}
-
-.list-doctors .post-rank .post-thumbnail {
-  aspect-ratio: 173/173;
 }
 
 .list-doctors .post-name {
@@ -3367,58 +3377,15 @@ table tr td:not(:last-child) {
   width: 40%;
 }
 
-.list-doctors .rank-point {
-  background: #F4F4F4;
-  color: #734895;
-  font-weight: 700;
-  font-size: 14px;
-  display: flex;
-  padding: 4px 0;
-  justify-content: center;
+.list-doctors .point-rank {
+  border-bottom-left-radius: 0;
   border-top-right-radius: 25px;
 }
 
-.list-doctors .list-status {
-  list-style: none;
-  margin: 0 auto;
-  padding: 15px;
-}
-
-.list-doctors .list-status .item {
-  font-size: 13px;
-  padding: 6px;
-  margin-bottom: 6px;
-  border-radius: 20px;
-  font-weight: 700;
-  display: inline-block;
-}
-
-.list-doctors .list-status .fa {
-  margin-right: 7px;
-}
-
-.list-doctors .list-status .good {
-  background: #E5FAF2;
-}
-
-.list-doctors .list-status .good .fa {
-  color: #36CC7B;
-}
-
-.list-doctors .list-status .rather {
-  background: #FFF6ED;
-}
-
-.list-doctors .list-status .rather .fa {
-  color: #FBA34A;
-}
-
-.list-doctors .list-status .bad {
-  background: #FEEEED;
-}
-
-.list-doctors .list-status .bad .fa {
-  color: #F95D59;
+.list-doctors .point-rank .list-status {
+  padding: 13px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .list-doctors .load-more {
@@ -3445,29 +3412,36 @@ table tr td:not(:last-child) {
     display: block;
     margin-bottom: 16px;
   }
-  .list-doctors .post-rank {
+  .list-doctors .post-ranks {
     border-top-right-radius: 25px;
   }
-  .list-doctors .post-rank .post-thumbnail {
+  .list-doctors .post-ranks .post-thumbnail {
     width: 100px;
-    height: 100px;
-    aspect-ratio: 1;
+    aspect-ratio: 100/100;
+    flex-shrink: 0;
   }
-  .list-doctors .post-rank .rank {
+  .list-doctors .post-ranks .rank {
     font-size: 18px;
   }
-  .list-doctors .inner-rank {
-    width: 100%;
-  }
-  .list-doctors .rank-point {
+  .list-doctors .point-rank {
     border-top-right-radius: 0;
+    border-bottom-left-radius: 25px;
   }
-  .list-doctors .list-status {
-    display: flex;
-    justify-content: center;
+  .list-doctors .point-rank .list-status {
+    flex-direction: row;
   }
-  .list-doctors .list-status .item {
-    margin-right: 8px;
+}
+
+@media (max-width: 575px) {
+  .list-doctors .post-ranks .post-thumbnail .number-rank {
+    padding: 3px 10px;
+  }
+  .list-doctors .point-rank {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 25px;
+  }
+  .list-doctors .point-rank .list-status {
+    flex-direction: row;
   }
 }
 
@@ -3693,37 +3667,35 @@ table tr td:not(:last-child) {
   padding-top: 45px;
 }
 
-.quick-info .post-rank {
+.quick-info .post-ranks {
   box-shadow: none;
+  margin-bottom: 30px;
 }
 
-.quick-info .post-rank .post-thumbnail {
+.quick-info .post-ranks .post-thumbnail {
   width: 128px;
-  height: 128px;
-}
-
-.quick-info .post-rank .post-thumbnail img {
+  aspect-ratio: 128/128;
   border: 1px solid #DBDBDB;
-  background-color: #fff;
+  overflow: hidden;
 }
 
-.quick-info .post-rank .post-content {
+.quick-info .post-ranks .post-content {
   font-size: 13px;
 }
 
-.quick-info .post-rank .post-content .content-item {
+.quick-info .post-ranks .post-content .content-item {
   margin-bottom: 5px;
 }
 
-.quick-info .post-rank .post-content .post-office {
+.quick-info .post-ranks .post-content .post-office {
   font-size: 16px;
 }
 
 @media (max-width: 575px) {
-  .quick-info .post-rank {
+  .quick-info .post-ranks {
     margin-bottom: 0;
   }
-  .quick-info .post-rank .post-content {
+  .quick-info .post-ranks .post-content {
     font-size: 12px;
   }
 }
@@ -3902,28 +3874,30 @@ table tr td:not(:last-child) {
   }
 }
 
-.info-doctor .post-rank {
+.info-doctor .post-ranks {
   box-shadow: 0 0 6px rgba(214, 178, 255, 0.5);
   border: none;
   justify-content: unset;
+  border-radius: 25px;
+  padding: 16px;
 }
 
-.info-doctor .post-rank .post-thumbnail {
-  aspect-ratio: 1;
+.info-doctor .post-ranks .post-thumbnail {
+  aspect-ratio: 164/164;
   width: 164px;
-  height: 164px;
+  margin-bottom: 0;
 }
 
-.info-doctor .post-rank .info-brand {
+.info-doctor .post-ranks .info-brand {
   font-size: 14px;
 }
 
-.info-doctor .post-rank .post-name {
+.info-doctor .post-ranks .post-name {
   font-size: 20px;
   margin-bottom: 12px;
 }
 
-.info-doctor .post-rank .post-item {
+.info-doctor .post-ranks .post-item {
   margin-bottom: 5px;
 }
 
@@ -4955,6 +4929,15 @@ table tr td:not(:last-child) {
   display: block;
 }
 
+.archive-content {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.archive-content .archive-desc {
+  margin-bottom: 50px;
+}
+
 .archive-item {
   margin-bottom: 16px;
 }
@@ -5474,50 +5457,41 @@ table tr td:not(:last-child) {
   border-radius: 50%;
   margin-bottom: 16px;
   display: block;
-  overflow: hidden;
 }
 
-.status-content .inner .inner-img img {
-  object-fit: cover;
-  object-position: 50% 50%;
-  -o-object-position: 50% 50%;
-  width: 100%;
-  height: 100%;
-}
-
-.status-content .inner-title {
+.status-content .inner .inner-title {
   font-weight: 700;
   text-align: center;
   margin-bottom: 0;
 }
 
-.customer-choice {
+.status-content .customer-choice {
   padding: 16px;
   border: 1px solid #ECECEC;
   border-radius: 10px;
   margin-bottom: 50px;
 }
 
-.customer-choice .item-text {
+.status-content .customer-choice .item-text {
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.customer-choice .range {
+.status-content .customer-choice .range {
   background: #F6EEFF;
   border-radius: 10px;
   height: 30px;
 }
 
-.customer-choice .range:not(:last-child) {
+.status-content .customer-choice .range:not(:last-child) {
   margin-bottom: 16px;
 }
 
-.customer-choice .range:last-child {
+.status-content .customer-choice .range:last-child {
   margin-bottom: 20px;
 }
 
-.customer-choice .range-number {
+.status-content .customer-choice .range-number {
   color: #fff;
   font-weight: 700;
   display: flex;
@@ -5526,11 +5500,11 @@ table tr td:not(:last-child) {
   height: 100%;
 }
 
-.customer-choice .full {
+.status-content .customer-choice .full {
   border-radius: 10px;
 }
 
-.customer-choice .range-inner {
+.status-content .customer-choice .range-inner {
   background: #DEC5F9;
   height: 100%;
   border-top-left-radius: 10px;
@@ -5538,21 +5512,21 @@ table tr td:not(:last-child) {
   width: 40%;
 }
 
-.customer-choice .last-item {
+.status-content .customer-choice .last-item {
   width: 20%;
 }
 
-.customer-choice .choice-desc {
+.status-content .customer-choice .choice-desc {
   margin-bottom: 24px;
 }
 
-.customer-choice .choice-action {
+.status-content .customer-choice .choice-action {
   display: flex;
   justify-content: center;
 }
 
-.customer-choice .btn-view,
-.customer-choice .btn-choice {
+.status-content .customer-choice .btn-view,
+.status-content .customer-choice .btn-choice {
   background: #FF898B;
   color: #fff;
   font-weight: 700;
@@ -5560,44 +5534,44 @@ table tr td:not(:last-child) {
   border-radius: 10px;
 }
 
-.customer-choice .btn-view:hover,
-.customer-choice .btn-choice:hover {
+.status-content .customer-choice .btn-view:hover,
+.status-content .customer-choice .btn-choice:hover {
   opacity: 0.8;
 }
 
-.customer-choice .btn-view {
+.status-content .customer-choice .btn-view {
   margin-right: 16px;
 }
 
-.customer-choice .btn-choice {
+.status-content .customer-choice .btn-choice {
   background: #734895;
 }
 
-.toplist-faq {
+.status-content .toplist-faq {
   padding: 0;
   background: #fff;
 }
 
-.toplist-faq .item-faq {
+.status-content .toplist-faq .item-faq {
   width: 100%;
 }
 
-.toplist-faq .item-faq:last-child {
+.status-content .toplist-faq .item-faq:last-child {
   margin-bottom: 24px;
 }
 
-.comment-form {
+.status-content .comment-form {
   background-color: #F6EEFF;
   border: none;
 }
 
-.comment-form .comment-title {
+.status-content .comment-form .comment-title {
   font-size: 18px;
   text-transform: uppercase;
   margin-bottom: 18px;
 }
 
-.comment-form .inner {
+.status-content .comment-form .inner {
   border: 1px solid #734895;
   padding: 8px;
   text-align: center;
@@ -5610,11 +5584,11 @@ table tr td:not(:last-child) {
   background: #fff;
 }
 
-.comment-form .select-option {
+.status-content .comment-form .select-option {
   position: relative;
 }
 
-.comment-form .select-option::after {
+.status-content .comment-form .select-option::after {
   content: '';
   position: absolute;
   background: url(../images/service/checked.png) no-repeat;
@@ -5624,13 +5598,13 @@ table tr td:not(:last-child) {
   left: 0;
 }
 
-.comment-form #comment,
-.comment-form .form-control {
+.status-content .comment-form #comment,
+.status-content .comment-form .form-control {
   background: #fff;
 }
 
 @media (max-width: 575px) {
-  .comment-form .inner {
+  .status-content .comment-form .inner {
     padding: 8px 6px;
   }
 }
@@ -5669,12 +5643,6 @@ table tr td:not(:last-child) {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
-  overflow: hidden;
-}
-
-.table-price .list-tableprice .inner-img img {
-  width: 100%;
-  height: 100%;
 }
 
 .table-price .list-tableprice .title-link {
@@ -5686,15 +5654,6 @@ table tr td:not(:last-child) {
 
 .table-price .list-tableprice .inner-desc {
   margin-bottom: 24px;
-}
-
-.table-price .list-tableprice .inner-desc p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  margin-bottom: 0;
 }
 
 .table-price .list-tableprice .inner-btn {
@@ -5797,7 +5756,7 @@ table tr td:not(:last-child) {
 }
 
 .table-price-single .list-doctors-table .post-ranks {
-  padding: 17px 16px 17px 16px;
+  padding: 17px 0 17px 16px;
   width: 75%;
 }
 

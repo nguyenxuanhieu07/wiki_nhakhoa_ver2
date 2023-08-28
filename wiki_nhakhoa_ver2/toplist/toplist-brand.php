@@ -100,7 +100,7 @@ if ($toplist_service != '') {
                         $i = 1;
                         while ($list_post->have_posts()):
                             $list_post->the_post();
-                            $args                  = array('key' => $i);
+                            $args                  = array('rank' => $i);
                             $post_id               = get_the_ID();
                             $total_ratting_comment = get_post_meta($post_id, 'total-ratting-post', true) ? get_post_meta($post_id, 'total-ratting-post', true) : 0;
                             $expert_desc           = rwmb_meta('brand-desc') ? rwmb_meta('brand-desc') : '';
@@ -109,7 +109,7 @@ if ($toplist_service != '') {
                             $list_basis            = rwmb_meta('brand-degree-basis') ? rwmb_meta('brand-degree-basis') : '';
                             ?>
                             <div class="toplist-item">
-                                <?php get_template_part('components/post', 'brand', $args); ?>
+                                <?php get_template_part('components/post-ranks', 'brand', $args); ?>
                                 <div class="row toplist-point">
                                     <div class="col-md-6 mb-2">
                                         <div class="point-doctor">
